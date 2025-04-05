@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import {aboutPageData} from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Us | AI Automation Agency",
@@ -39,19 +40,20 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                We Build Digital <span className="text-blue-400">Success</span> Stories
+                <span className="text-blue-400">{aboutPageData.hero.title} </span>
               </h1>
               <p className="text-lg text-slate-300 max-w-xl">
-                Our mission is to empower local businesses with enterprise-grade web solutions and AI automation that
-                drive real results.
+                {aboutPageData.hero.description}
               </p>
             </div>
             <div className="lg:w-1/2 mt-8 lg:mt-0">
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-30"></div>
                 <div className="relative bg-slate-800 p-6 rounded-lg shadow-xl">
-                  <img
-                    src="/placeholder.svg?height=400&width=600"
+                  <Image
+                    src={aboutPageData.hero.image}
+                    height={400}
+                    width={600}
                     alt="Our team at work"
                     className="w-full h-auto rounded-md"
                   />
@@ -66,14 +68,14 @@ export default function AboutPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Story</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">How we started and where we are going</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{aboutPageData.story.title}</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">{aboutPageData.story.description}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src="/placeholder.svg"
+                src={aboutPageData.story.image}
                 height={400}
                 width={600}
                 alt="Company history"
@@ -83,26 +85,11 @@ export default function AboutPage() {
 
             <div className="space-y-6">
               <p className="text-slate-700">
-                Founded in 2020, our agency was born from a simple observation: local businesses were being left behind
-                in the digital revolution. While enterprise companies had access to cutting-edge technology and
-                expertise, small and medium businesses were often stuck with outdated, ineffective digital solutions.
+                {aboutPageData.story.content}
               </p>
 
               <p className="text-slate-700">
-                We set out to change that by bringing enterprise-grade web design and AI automation to local businesses
-                at accessible price points. Our team combines deep technical expertise with a genuine understanding of
-                the challenges faced by local businesses.
-              </p>
-
-              <p className="text-slate-700">
-                Today, we've helped hundreds of businesses across the UK transform their digital presence and
-                operations. From restaurants and clinics to boutique shops and professional services, we have delivered
-                solutions that drive real business results.
-              </p>
-
-              <p className="text-slate-700">
-                Our vision is to continue bridging the digital divide, ensuring that businesses of all sizes can harness
-                the power of technology to thrive in an increasingly digital world.
+                {aboutPageData.story.content}
               </p>
             </div>
           </div>
@@ -113,8 +100,8 @@ export default function AboutPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Values</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{aboutPageData.values.title}</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">{aboutPageData.values.description}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -157,7 +144,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-slate-900">Partnership</h3>
               </div>
               <p className="text-slate-600">
-                We see ourselves as partners in our clients' success, not just service providers. Your growth is our
+                We see ourselves as partners in our clients success, not just service providers. Your growth is our
                 growth.
               </p>
             </div>
@@ -168,8 +155,8 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-slate-900">Results-Driven</h3>
               </div>
               <p className="text-slate-600">
-                We focus on delivering measurable business outcomes, not just technical deliverables. If it doesn't
-                drive results, we don't do it.
+                We focus on delivering measurable business outcomes, not just technical deliverables. If it does not
+                drive results, we do not do it.
               </p>
             </div>
 
