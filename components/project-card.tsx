@@ -1,84 +1,77 @@
-import type React from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Star } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { CheckCircle } from "lucide-react"
 
-interface ServiceIcon {
-  icon: React.ReactNode
-  name: string
+interface Service {
+    icon: any
+    name: string
+}
+
+interface Project {
+    title: string
+    industry: string
+    description: string
+    image: string
+    services: Service[]
+    results: string[]
 }
 
 interface ProjectCardProps {
-  title: string
-  industry: string
-  description: string
-  services: ServiceIcon[]
-  results: string[]
-  image: string
-  featured?: boolean
+    project: Project
 }
 
-export default function ProjectCard({
-  title,
-  industry,
-  description,
-  services,
-  results,
-  image,
-  featured = false,
-}: ProjectCardProps) {
-  return (
-    <div
-      className={`bg-white rounded-lg shadow-md overflow-hidden border ${featured ? "border-blue-200 ring-1 ring-blue-200" : "border-slate-200"}`}
-    >
-      <div className="relative h-64 w-full">
-        <Image src={image || "/banner3.svg"} alt={`${title} Project`} fill className="object-cover" />
-      </div>
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="text-2xl font-semibold text-slate-900">{title}</h3>
-          <div className="flex space-x-2">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-              {industry}
-            </span>
-          </div>
-        </div>
+export default function ProjectCard({ project }: ProjectCardProps) {
+    const { title, industry, description, image, services, results } = project
 
-        <div className="mb-4">
-          <h4 className="text-sm font-medium text-slate-500 mb-2">SERVICES PROVIDED</h4>
-          <div className="flex flex-wrap gap-2">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-center text-sm bg-slate-100 px-3 py-1 rounded-full">
-                {service.icon}
-                <span>{service.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+    return (
+        <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg">
+            <div className="relative h-64 w-full">
+                <Image
+                    src={image || "/placeholder.svg"}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+            </div>
 
-        <p className="text-slate-600 mb-4">{description}</p>
+            <CardHeader className="pb-2">
+                <div className="flex justify-between items-start">
+                    <h3 className="text-2xl font-bold">{title}</h3>
+                    <Badge variant="outline" className="bg-primary/10 text-primary">
+                        {industry}
+                    </Badge>
+                </div>
+            </CardHeader>
 
-        <div className="mb-6">
-          <h4 className="text-sm font-medium text-slate-500 mb-2">RESULTS</h4>
-          <ul className="space-y-2">
-            {results.map((result, index) => (
-              <li key={index} className="flex items-start">
-                <Star className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-700">{result}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <CardContent className="flex-grow">
+                <p className="text-muted-foreground mb-6">{description}</p>
 
-        <Link href="/projects">
-          <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-            View Case Study
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </Link>
-      </div>
-    </div>
-  )
+                <div className="flex flex-wrap gap-3 mb-6">
+                    {services.map((service, index) => {
+                        const Icon = service.icon
+                        return (
+                            <div key={index} className="flex items-center gap-1.5">
+                                <Icon className="h-4 w-4 text-primary" />
+                                <span className="text-sm font-medium">{service.name}</span>
+                            </div>
+                        )
+                    })}
+                </div>
+            </CardContent>
+
+            <CardFooter className="bg-muted/50 flex flex-col items-start pt-4">
+                <h4 className="font-semibold text-sm uppercase tracking-wide mb-2">Results</h4>
+                <ul className="space-y-2 w-full">
+                    {results.map((result, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                            <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
+                            <span className="text-sm">{result}</span>
+                        </li>
+                    ))}
+                </ul>
+            </CardFooter>
+        </Card>
+    )
 }
-
