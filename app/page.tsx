@@ -257,7 +257,9 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/banner1.jpg?height=400&width=600"
+                  src="/banner1.jpg"
+                  height={400}
+                  width={600}
                   alt="Bistro Deluxe Website"
                   className="object-cover w-full h-full"
                 />
@@ -288,7 +290,9 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/banner4.jpg?height=400&width=600"
+                  src="/banner4.jpg"
+                  height={400}
+                  width={600}
                   alt="FitLife Gym Membership Portal"
                   className="object-cover w-full h-full"
                 />
