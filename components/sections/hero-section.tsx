@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -16,8 +15,6 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-                                        title="Welcome to InfiniTechx",
-                                        description="Web Development and AI Solutions",
                                         primaryButtonText = "Explore Services",
                                         primaryButtonLink = "/services",
                                         secondaryButtonText = "Contact Us",
@@ -26,28 +23,15 @@ export default function HeroSection({
                                         imageAlt = "Hero image",
                                     }: HeroSectionProps) {
     return (
-        <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-20 px-8 sm:px-16 lg:px-24">
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="lg:w-1/2 space-y-6">
-                        <h1 className="text-4xl font-bold text-white">{title}</h1>
-                        <p
-                            className="text-lg max-w-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text"
-                        >
-                            {description}
-                        </p>
-
-                        <div className="flex flex-col items-center justify-center sm:flex-row gap-4 pt-4">
                             <Link href={primaryButtonLink}>
-                                <Button size="lg"
-                                        className="bg-blue-600 hover:bg-blue-700 hover:text-2xl cursor-pointer">
                                     {primaryButtonText}
                                     <ArrowRight className="ml-2 h-4 w-4"/>
                                 </Button>
                             </Link>
                             <Link href={secondaryButtonLink}>
-                                <Button size="lg"
-                                        className="cursor-pointer text-white border-white bg-gray-400 hover:transform:scale-110 duration-300 hover:text-2xl">
                                     {secondaryButtonText}
                                 </Button>
                             </Link>
