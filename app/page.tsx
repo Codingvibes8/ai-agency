@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Globe, MessageSquare, Search, Shield, ShoppingCart, Users } from "lucide-react"
+import { ArrowRight,Tool, CheckCircle, Globe, MessageSquare, Search, Shield, ShoppingCart, Users } from "lucide-react"
 import ServiceCard from "@/components/service-card"
 import TestimonialCard from "@/components/testimonial-card"
 import type { Metadata } from "next"
@@ -257,18 +257,18 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/banner1.jpg"
+                  src="/dentist-hero.jpg"
                   height={400}
                   width={600}
-                  alt="Bistro Deluxe Website"
+                  alt="Dental Website"
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-slate-900">Bistro Deluxe</h3>
+                  <h3 className="text-xl font-semibold text-slate-900">Dental Clinic </h3>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                    Restaurant
+                    Medicine
                   </span>
                 </div>
 
@@ -290,28 +290,28 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
-                  src="/banner4.jpg"
+                  src="/electric1.png"
                   height={400}
                   width={600}
-                  alt="FitLife Gym Membership Portal"
+                  alt="Electrician website hero image"
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-slate-900">FitLife Gym</h3>
+                  <h3 className="text-xl font-semibold text-slate-900">ElectricJay</h3>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                    Fitness
+                    Construction
                   </span>
                 </div>
 
                 <p className="text-slate-600 mb-4">
-                  Comprehensive membership portal with class booking system that increased attendance by 34% and reduced
+                  Comprehensive  class booking system that increased attendance by 34% and reduced
                   admin time by 15 hours weekly.
                 </p>
 
                 <Link href="/projects">
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-500">
                     View Project
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

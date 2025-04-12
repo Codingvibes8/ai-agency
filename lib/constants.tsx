@@ -157,14 +157,14 @@ featuredProjects: {
             industry: "Medical",
             description:
                 "Complete digital transformation with a hyperlocal dental website, booking system, and AI chatbot, resulting in 45% more online reservations.",
-            image: "/banner4.jpg?height=400&width=600",
+            image: "/dentist-hero.jpg?height=400&width=600",
         },
         {
-            title: "FitLife Gym",
-            industry: "Fitness",
+            title: "Electrican's Website",
+            industry: "Construction",
             description:
                 "Comprehensive membership portal with class booking system that increased attendance by 34% and reduced admin time by 15 hours weekly.",
-            image: "/banner3.jpg?height=400&width=600",
+            image: "/electric1.png?height=400&width=600",
         },
     ],
 },
@@ -311,11 +311,12 @@ export const projectsPageData = {
 
     projects: [
         {
-            title: "Bistro Deluxe",
-            industry: "Restaurant",
+            title: "Dentist Website",
+            industry: "Medicine",
             description:
-                "Bistro Deluxe needed a complete digital transformation to compete in the busy London restaurant scene. We created a hyperlocal website with an integrated booking system and AI chatbot to streamline operations.",
-            image: "/banner1.jpg?height=400&width=600",
+                "DentalHub needed a complete digital transformation to compete in the busy London dental scene." +
+                " We created a hyperlocal website with an integrated booking system and AI chatbot to streamline operations.",
+            image: "/dentist-hero.jpg?height=400&width=600",
             services: [
                 { icon: <Globe className="h-3.5 w-3.5 text-slate-700 mr-1.5" />, name: "Hyperlocal Website" },
                 { icon: <Calendar className="h-3.5 w-3.5 text-slate-700 mr-1.5" />, name: "Booking System" },
@@ -324,30 +325,30 @@ export const projectsPageData = {
             results: [
                 "45% increase in online reservations",
                 "68% reduction in phone call volume",
-                'Top 3 Google ranking for "best Italian restaurant in Chelsea"',
+                'Top 3 Google ranking for "best Dental Clinic in Chelsea"',
             ],
         },
         {
-            title: "Artisan Boutique",
-            industry: "Retail",
+            title: "AutoAssist Pro",
+            industry: "Engineering",
             description:
-                "Artisan Boutique, a handcrafted jewelry store, wanted to expand beyond their physical location. We built a local e-commerce platform that maintained their brand identity while enabling online sales.",
-            image: "/banner1.jpg?height=400&width=600",
+                "AutoAssist Pro, wanted to expand beyond their physical location. We built a local e-commerce platform that maintained their brand identity while enabling online sales.",
+            image: "/autoShop.png?height=400&width=600",
             services: [
                 { icon: <ShoppingCart className="h-3.5 w-3.5 text-slate-700 mr-1.5" />, name: "Local E-commerce" },
                 { icon: <Search className="h-3.5 w-3.5 text-slate-700 mr-1.5" />, name: "AI Local SEO" },
             ],
             results: [
-                "£12,500 in online sales within first month",
+                "£12,500 in online sales of car parts within first month",
                 "32% of sales now coming from outside local area",
                 "156% increase in Instagram followers",
             ],
         },
         {
-            title: "FitLife Gym",
-            industry: "Fitness",
+            title: "ElectricJay",
+            industry: "Construction",
             description:
-                "FitLife Gym needed a digital solution to manage their growing membership base and class schedule. We developed a comprehensive membership portal with integrated class booking and payment processing.",
+                "ElectricJay needed a digital solution to manage their growing schedule. We developed a comprehensive  integrated class booking and payment processing.",
             image: "/banner2.jpg?height=400&width=600",
             services: [
                 { icon: <Users className="h-3.5 w-3.5 text-slate-700 mr-1.5" />, name: "Membership Portal" },

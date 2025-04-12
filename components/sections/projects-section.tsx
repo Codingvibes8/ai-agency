@@ -40,9 +40,11 @@ export default function ProjectsSection({
                     {projects.map((project, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
                             <div className="relative h-64 w-full">
-                                <img
+                                <Image
                                     src={project.image || "/placeholder.svg"}
                                     alt={`${project.title} Project`}
+                                    width={400}
+                                        height={400}
                                     className="object-cover w-full h-full"
                                 />
                             </div>

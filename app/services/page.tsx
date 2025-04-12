@@ -76,8 +76,8 @@ export default function ServicesPage() {
 
       {/* Services List */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container mx-auto max-w-[350px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
             <Service
               icon={<Globe className="h-12 w-12 text-blue-600" />}
               title="AI Hyperlocal Websites"

@@ -170,7 +170,7 @@ export default function ProjectsPage() {
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
-                    src="/electric.png"
+                    src="/electric1.png"
                     height={500}
                     width={600}
                     alt="PowerConnect Electric - Reliable Electrical Services"

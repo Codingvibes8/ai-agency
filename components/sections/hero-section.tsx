@@ -27,6 +27,7 @@ export default function HeroSection({
         <div className="container mx-auto max-w-6xl">
             <div className="flex flex-col lg:flex-row items-center gap-12">
                 <div className="lg:w-1/2 space-y-6">
+
                     <h1 className="text-4xl font-bold">{title}</h1>
                     <p className="text-lg text-gray-600">{description}</p>
                     <div className="flex space-x-4">
