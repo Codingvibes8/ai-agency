@@ -1,11 +1,12 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight,Tool, CheckCircle, Globe, MessageSquare, Search, Shield, ShoppingCart, Users } from "lucide-react"
-import ServiceCard from "@/components/service-card"
+import { ArrowRight, CheckCircle, Globe, MessageSquare, Search, Shield, ShoppingCart, Users } from "lucide-react"
+
 import TestimonialCard from "@/components/testimonial-card"
 import type { Metadata } from "next"
 import Image from "next/image"
-
+import ServicesPage from "@/app/services/page";
+import AboutPage from "@/app/about/page";
 export const metadata: Metadata = {
   title: "AI Automation Agency | Web Design & AI Solutions",
   description:
@@ -21,12 +22,15 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Enterprise-Grade <span className="text-blue-400">Web Design</span> &{" "}
+              <h2 className={'text-4xl  text-white font-bold font-serif'}><span className={'text-red-700'}>Infini</span>
+                <span className={'text-blue-700'}>Tecx</span>
+              </h2>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                <span className="text-blue-400">Web Development</span> &{" "}
                 <span className="text-blue-400">AI Automation</span>
               </h1>
-              <p className="text-lg text-slate-300 max-w-xl">
-                Transforming businesses with cutting-edge web solutions and AI-powered automation. Tailored for local
+              <p className="text-[0.8rem] text-slate-300 max-w-xl">
+                Offering cutting-edge Web solutions and AI-powered automation. Tailored for local
                 businesses seeking growth and digital excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -34,7 +38,7 @@ export default function Home() {
                   Explore Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+                <Button size="lg" className="text-white border-white bg-indigo-800">
                   Contact Us
                 </Button>
               </div>
@@ -56,77 +60,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/*About*/}
+        <AboutPage/>
       {/* Featured Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Comprehensive web design and AI automation solutions tailored for your business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={<Globe className="h-10 w-10 text-blue-600" />}
-              title="AI Hyperlocal Websites"
-              description="Custom-built websites optimized for local search and engagement."
-              pricing="£1,500–£7,500 (setup)"
-              clients="Restaurants, clinics"
-            />
-
-            <ServiceCard
-              icon={<Users className="h-10 w-10 text-blue-600" />}
-              title="Custom Booking Systems"
-              description="Streamlined booking solutions for appointment-based businesses."
-              pricing="£3,000–£8,000 + £100/month"
-              clients="Salons, tutors"
-            />
-
-            <ServiceCard
-              icon={<ShoppingCart className="h-10 w-10 text-blue-600" />}
-              title="Local E-commerce"
-              description="Powerful online stores for local businesses with integrated payment solutions."
-              pricing="£5,000–£15,000 + 5% revenue"
-              clients="Artisan shops, boutiques"
-            />
-
-            <ServiceCard
-              icon={<MessageSquare className="h-10 w-10 text-blue-600" />}
-              title="AI Chatbots"
-              description="Intelligent conversational agents to enhance customer service."
-              pricing="£500 setup + £100/month"
-              clients="Auto repair shops, hotels"
-            />
-
-            <ServiceCard
-              icon={<Search className="h-10 w-10 text-blue-600" />}
-              title="AI Local SEO"
-              description="Data-driven SEO strategies to dominate local search results."
-              pricing="£300–£1,500/month"
-              clients="Dentists, retail stores"
-            />
-
-            <ServiceCard
-              icon={<Shield className="h-10 w-10 text-blue-600" />}
-              title="Security Audits"
-              description="Comprehensive security assessments to protect your digital assets."
-              pricing="£500–£2,000"
-              clients="E-commerce, member sites"
-            />
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/services">
-              <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                View All Services
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ServicesPage/>
 
       {/* Why Choose Us */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">

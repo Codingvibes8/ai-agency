@@ -21,7 +21,7 @@ function TeamMember({ name, role, bio, image }: TeamMemberProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex flex-col items-center text-center">
       <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
-        <Image src={image || "/placeholder.svg"} alt={name} width={128} height={128} className="object-cover" />
+        <Image src={image || "/man-user.svg"} alt={name} width={128} height={128} className="object-cover" />
       </div>
       <h3 className="text-xl font-semibold text-slate-900 mb-1">{name}</h3>
       <p className="text-blue-600 font-medium mb-3">{role}</p>
@@ -50,8 +50,10 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-30"></div>
                 <div className="relative bg-slate-800 p-6 rounded-lg shadow-xl">
-                  <img
-                    src="/placeholder.svg?height=400&width=600"
+                  <Image
+                    src="/banner2.jpg"
+                    height={400}
+                    width={600}
                     alt="Our team at work"
                     className="w-full h-auto rounded-md"
                   />
@@ -73,7 +75,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src="/placeholder.svg"
+                src="/banner2.jpg"
                 height={400}
                 width={600}
                 alt="Company history"

@@ -16,8 +16,8 @@ export default function Navbar() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-slate-900">
-                Infini<span className="text-blue-600">techx</span>
+              <span className="text-2xl font-bold font-serif text-slate-900">
+                Infini<span className="font-serif text-blue-600">Techx</span>
               </span>
               </Link>
             </div>

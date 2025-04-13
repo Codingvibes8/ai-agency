@@ -25,7 +25,7 @@ export default function HeroSection({
                                     }: HeroSectionProps) {
     return (
         <div className="container mx-auto max-w-6xl">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex flex-col md:flex-row items-center gap-12">
                 <div className="lg:w-1/2 space-y-6">
 
                     <h1 className="text-4xl font-bold">{title}</h1>
@@ -52,8 +52,7 @@ export default function HeroSection({
                                 src={image}
                                 alt={imageAlt}
                                 className="w-full h-auto rounded-md"
-                                width={600}
-                                height={400}
+                                fill
                             />
                         </div>
                     </div>
