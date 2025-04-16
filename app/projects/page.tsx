@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Calendar, Globe, MessageSquare, Search, ShoppingCart, Star, Users } from "lucide-react"
+import { ArrowRight, Calendar, Globe, BatteryCharging, Search, PenTool as Tool, Star, Users,Zap } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            {/* Project1: The Gentleman's Barber */}
+            {/* Project1: Maxim Barber */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
               <div className="relative h-64 w-full">
                 <Image
@@ -43,7 +43,7 @@ export default function ProjectsPage() {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-semibold text-slate-900">The Gentleman's Barber</h3>
+                  <h3 className="text-2xl font-semibold text-slate-900">Maxim Barber</h3>
                   <div className="flex space-x-2">
         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
           Barber Services
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <p className="text-slate-600 mb-4">
-                  The Gentlemans Barber prides itself on delivering premium grooming experiences tailored to the modern man. From
+                  Maxim Barber prides itself on delivering premium grooming experiences tailored to the modern man. From
                   haircuts to beard trims, we have refined every detail to provide exceptional service.
                 </p>
 

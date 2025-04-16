@@ -1,69 +1,37 @@
-import type { ReactNode } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
-import ServiceCard from "@/components/service-card"
+'use client';
+
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
+import { SERVICES_CONSTANTS } from '@/constants/services';
 
 interface Service {
-    icon: ReactNode
-    title: string
-    description: string
-    pricing: string
-    clients: string
+    id: string;
+    title: string;
+    description: string;
 }
 
-interface ServicesSectionProps {
-    title: string
-    description: string
-    services: Service[]
-    showViewAllButton?: boolean
-    viewAllButtonText?: string
-    viewAllButtonLink?: string
-    bgColor?: string
-}
+const mockServices: Service[] = SERVICES_CONSTANTS;
 
-export default function ServicesSection({
-                                            title,
-                                            description,
-                                            services,
-                                            showViewAllButton = true,
-                                            viewAllButtonText = "View All Services",
-                                            viewAllButtonLink = "/services",
-                                            bgColor = "bg-white",
-                                        }: ServicesSectionProps) {
+function ServicesSection() {
     return (
-        <section className={`py-20 px-4 sm:px-6 lg:px-8`}>
-            <div className="container mx-auto max-w-[400px]">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{title}</h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">{description}</p>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {services.map((service, index) => (
-                        <ServiceCard
-                            key={index}
-                            icon={service.icon}
-                            title={service.title}
-                            description={service.description}
-                            pricing={service.pricing}
-                            clients={service.clients}
-                        />
-                    ))}
-                </div>
-
-                {showViewAllButton && (
-                    <div className="text-center mt-12">
-                        <Link href={viewAllButtonLink}>
-                            <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                                {viewAllButtonText}
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                        </Link>
-                    </div>
-                )}
+        <section className="py-10">
+            <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+            <div className="container mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {mockServices.map(service => (
+                    <Card key={service.id}>
+                        <CardHeader>
+                            <CardTitle>
+                                <Link href={`/services/${service.id}`} className="hover:underline">
+                                    {service.title}
+                                </Link>
+                            </CardTitle>
+                            <CardDescription>{service.description}</CardDescription>
+                        </CardHeader>
+                    </Card>
+                ))}
             </div>
         </section>
-    )
+    );
 }
 
+export default ServicesSection;

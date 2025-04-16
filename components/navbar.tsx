@@ -11,7 +11,7 @@ export default function Navbar() {
   const { mainNav } = navigationData
 
   return (
-      <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-slate-200 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">

@@ -20,9 +20,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="lg:w-1/2 space-y-6">
-              <h2 className={'text-4xl  text-white font-bold font-serif'}><span className={'text-red-700'}>Infini</span>
+              <h2 className={'text-4xl font-bold font-serif'}><span className={'text-yellow-400'}>Infini</span>
                 <span className={'text-blue-700'}>Tecx</span>
               </h2>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">

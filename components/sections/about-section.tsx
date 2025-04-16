@@ -1,5 +1,5 @@
 import React from 'react';
-import { aboutConstants } from "@/lib/constants";
+import { aboutConstants } from "@/constants/about-us";
 
 export default function AboutSection() {
     return (

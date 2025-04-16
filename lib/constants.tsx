@@ -275,7 +275,7 @@ export const servicesPageData = {
             icon: <Database className="h-12 w-12 text-blue-600" />,
             title: "Database Integration",
             description:
-                "Seamless integration of your existing systems with new digital solutions for unified data management.",
+                "Seamless integration of your existing systems with new digital solutions for unified constants management.",
             pricing: "£1,000–£3,000 (setup)",
             clients: "Scaling SMBs",
         },
@@ -456,12 +456,9 @@ export const aboutPageData = {
 
     story: {
         title: "Our Story",
-        description: "How we started and where we're going",
+        description: "How we started and where we are going",
         content: [
-            "Founded in 2020, our agency was born from a simple observation: local businesses were being left behind in the digital revolution. While enterprise companies had access to cutting-edge technology and expertise, small and medium businesses were often stuck with outdated, ineffective digital solutions.",
-            "We set out to change that by bringing enterprise-grade web design and AI automation to local businesses at accessible price points. Our team combines deep technical expertise with a genuine understanding of the challenges faced by local businesses.",
-            "Today, we've helped hundreds of businesses across the UK transform their digital presence and operations. From restaurants and clinics to boutique shops and professional services, we've delivered solutions that drive real business results.",
-            "Our vision is to continue bridging the digital divide, ensuring that businesses of all sizes can harness the power of technology to thrive in an increasingly digital world.",
+            "Founded in 2020, I recognized that local businesses were often overlooked in the digital age. While large enterprises thrived with advanced technology, small businesses struggled with outdated, inefficient solutions. I made it my mission to deliver professional web design and AI automation tailored to local businesses, offering affordable, high-impact solutions combining technical expertise with an understanding of their unique challenges. I have worked with diverse businesses—from cafes and clinics to artisans and consultants—to transform their digital presence. My vision remains to bridge the digital gap and empower businesses of every size to succeed in a rapidly evolving digital world."
         ],
         image: "/about-ai.jpg?height=40&width=600",
         imageAlt: "Company history",

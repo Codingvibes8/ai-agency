@@ -23,13 +23,13 @@ const projects = [
         industry: "Retail",
         description:
             "AutoRepair Shop, wanted to expand beyond their physical location. We built a local e-commerce platform that maintained their brand identity while enabling online sales.",
-        image: "/autoshop.png?height=400&width=600",
+        image: "/brakes1.jpg?height=400&width=600",
         services: [
             { iconName: ShoppingCart, name: "Local E-commerce" },
             { iconName: Search, name: "AI Local SEO" },
         ],
         results: [
-            "£12,500 in online sales within first month",
+            "£12,500 in  sales within first month",
             "32% of sales now coming from outside local area",
             "156% increase in Instagram followers",
         ],
