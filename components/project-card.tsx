@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle } from "lucide-react"
 
 interface Service {
-    icon: any
+    icon: React.ElementType
     name: string
 }
 

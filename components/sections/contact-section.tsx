@@ -20,7 +20,7 @@ export default function ContactSection() {
                     <Card>
                         <CardHeader>
                             <CardTitle>Send Us a Message</CardTitle>
-                            <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
+                            <CardDescription>Fill out the form below and we will get back to you as soon as possible.</CardDescription>
                         </CardHeader>
                         <CardContent>
                             <form className="space-y-4">

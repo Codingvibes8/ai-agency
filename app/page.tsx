@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Globe, MessageSquare, Search, Shield, ShoppingCart, Users } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 
 import TestimonialCard from "@/components/testimonial-card"
 import type { Metadata } from "next"

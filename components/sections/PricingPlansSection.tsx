@@ -3,7 +3,31 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import { pricingPlans } from "@/lib/constants"
+const pricingPlans = [
+    {
+        name: "Basic",
+        description: "For small businesses",
+        price: "$19.99",
+        features: ["Basic features", "Limited support", "Limited customization"],
+        cta: "Get Started",
+        popular: false,
+    },
+    {
+        name: "Standard",
+        description: "For growing businesses",
+        price: "$49.99",
+        features: ["All basic features", "Priority support", "More customization options"],
+        cta: "Get Started",
+        popular: true,
+    },
+    {
+        name: "Premium",
+        description: "For large enterprises",
+        price: "$99.99",
+        features: ["All standard features", "24/7 support", "Full customization"],
+        cta: "Get Started",
+        popular: false,
+    },]
 
 export default function PricingPlansSection() {
     return (

@@ -1,5 +1,8 @@
 import React from 'react';
 import { aboutConstants } from "@/constants/about-us";
+import Image from 'next/image';
+
+
 
 export default function AboutSection() {
     return (
@@ -22,7 +25,7 @@ export default function AboutSection() {
                             className={`flex flex-col items-center space-y-2 border rounded-lg p-6 bg-gray-50 ${index === aboutConstants.aboutValue.length - 1 ? 'md:col-span-2 lg:col-span-1' : ''}`}
                         >
                             <div className="p-2 bg-primary/10 rounded-full">
-                                <img
+                                <Image
                                     src={value.icon}
                                     alt={`${value.title} Icon`}
                                     className="h-6 w-6 text-primary"

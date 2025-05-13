@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Contact Us | AI Automation Agency",
